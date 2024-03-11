@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/ngochuy268/music_news_official.git/static/css/main.5fbb50d0.css",
+    "main.js": "/ngochuy268/music_news_official.git/static/js/main.54888e98.js",
+    "static/js/453.ad6eb26e.chunk.js": "/ngochuy268/music_news_official.git/static/js/453.ad6eb26e.chunk.js",
+    "static/media/news-825x525.jpg": "/ngochuy268/music_news_official.git/static/media/news-825x525.ffab381b8ab3c7f0200e.jpg",
+    "static/media/news-450x350-2.jpg": "/ngochuy268/music_news_official.git/static/media/news-450x350-2.769f591eef7651779677.jpg",
+    "static/media/news-450x350-1.jpg": "/ngochuy268/music_news_official.git/static/media/news-450x350-1.6b8e357a5e607eb0832f.jpg",
+    "static/media/news-350x223-4.jpg": "/ngochuy268/music_news_official.git/static/media/news-350x223-4.f245bfedc5d13c486a59.jpg",
+    "static/media/news-350x223-5.jpg": "/ngochuy268/music_news_official.git/static/media/news-350x223-5.943869a6923e2f06d711.jpg",
+    "static/media/news-350x223-3.jpg": "/ngochuy268/music_news_official.git/static/media/news-350x223-3.9ff634fb9fc9e556adb2.jpg",
+    "static/media/news-350x223-2.jpg": "/ngochuy268/music_news_official.git/static/media/news-350x223-2.50ff523f583de67d4486.jpg",
+    "static/media/slick.svg": "/ngochuy268/music_news_official.git/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/ngochuy268/music_news_official.git/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/ngochuy268/music_news_official.git/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/ngochuy268/music_news_official.git/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/ngochuy268/music_news_official.git/index.html",
+    "main.5fbb50d0.css.map": "/ngochuy268/music_news_official.git/static/css/main.5fbb50d0.css.map",
+    "main.54888e98.js.map": "/ngochuy268/music_news_official.git/static/js/main.54888e98.js.map",
+    "453.ad6eb26e.chunk.js.map": "/ngochuy268/music_news_official.git/static/js/453.ad6eb26e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5fbb50d0.css",
+    "static/js/main.54888e98.js"
+  ]
+}
