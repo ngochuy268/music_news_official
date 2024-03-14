@@ -7,6 +7,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+
 
 import news1 from '../../img/news-450x350-1.jpg';
 import news2 from '../../img/news-450x350-2.jpg';
@@ -16,8 +18,9 @@ import news350_3 from '../../img/news-350x223-3.jpg';
 import news350_4 from '../../img/news-350x223-4.jpg';
 
 
-function TopNews(){
+function TopNews({ news }){
 
+    
     const NextArrow = ({ onClick }) => (
         <div className='arrow next' onClick={onClick}>
           <FontAwesomeIcon icon={faChevronRight} />
@@ -29,7 +32,6 @@ function TopNews(){
           <FontAwesomeIcon icon={faChevronLeft} />
         </div>
       );
-    
     const tnSlider = {
         autoplay: true,
         infinite: true,
@@ -46,22 +48,16 @@ function TopNews(){
                 <Row>
                     <Col md={6} className='tn-left'>
                         <Slider {...tnSlider}>
-                            <div>                                                          
-                                <div className='tn-img'>
-                                    <img src={news2} alt="news"/>
-                                    <div className='tn-title'>
-                                        <a href="#">Integer hendrerit elit eget purus sodales maximus</a>
-                                    </div>
-                                </div>                                   
-                            </div>
-                            <div>    
-                                <div className='tn-img'>
-                                    <img src={news1} alt="news"/>
-                                    <div className='tn-title'>
-                                        <a href="#">Lorem ipsum dolor sit amet</a>
-                                    </div>
-                                </div>  
-                            </div>
+                            {news.map(item => (
+                                <div>    
+                                    <div className='tn-img'>
+                                        <img src={news1} alt="news"/>
+                                        <div className='tn-title'>
+                                            <Link to={`/${item.name.toLowerCase().replace(/\s+/g, '-')}`}>{item.name}</Link>                                       
+                                        </div>                                   
+                                    </div>  
+                                </div>
+                            ))}
                         </Slider>
                     </Col>
                     <Col md={6} className='tn-right'>
@@ -81,6 +77,7 @@ function TopNews(){
                 </Row>
             </Container>
         </div>
+        
     </>
 }
 export default TopNews;

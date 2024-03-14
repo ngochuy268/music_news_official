@@ -7,9 +7,30 @@ import news350_3 from '../../img/news-350x223-3.jpg';
 import news350_5 from '../../img/news-350x223-5.jpg';
 import news350_4 from '../../img/news-350x223-4.jpg';
 
-function MainNews() {
+import ReactPaginate from 'react-paginate';
+import React, { useState } from 'react';
+
+
+function MainNews({ news, itemsPerPage }) {
     const items = Array.from({ length: 9 });
 
+    // Phan trang 
+    const [currentPage, setCurrentPage] = useState(0); // Số trang bắt đầu từ 0
+
+    const pageCount = Math.ceil(news.length / itemsPerPage); // Tính số trang dựa trên số mục trên mỗi trang
+  
+    // Tính chỉ mục của tin tức bắt đầu và kết thúc trên trang hiện tại
+    const startIndex = currentPage * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+  
+    // Lấy danh sách tin tức trên trang hiện tại
+    const currentNews = news.slice(startIndex, endIndex);
+  
+    // Hàm xử lý khi chuyển đến trang mới
+    const handlePageChange = ({ selected }) => {
+      setCurrentPage(selected);
+    };
+    
     return (
         <>
             <div className="main-news">
@@ -17,19 +38,28 @@ function MainNews() {
                     <Row>
                         <Col lg={9}>
                             <Row>
-                                <>   
-                                    {items.map((_,index) => (
-                                        <Col md={4} key={index}>
-                                            <div className="mn-img">
-                                                <img src={news350_1}/>
-                                                <div className="mn-title">
-                                                    <a href="">Lorem ipsum dolor sit</a>
-                                                </div>
-                                            </div>
-                                        </Col>                                   
-                                    ))}
-                                </>
+                                {currentNews.map((item, index) => (
+                                <Col md={4} key={index}>
+                                    <div className="mn-img">
+                                    <img src={news350_1} />
+                                    <div className="mn-title">
+                                        <a href={item.link}>{item.name}</a>
+                                    </div>
+                                    </div>
+                                </Col>
+                                ))}
                             </Row>
+                            <ReactPaginate
+                                previousLabel={'Previous'}
+                                nextLabel={'Next'}
+                                breakLabel={'...'}
+                                pageCount={pageCount}
+                                marginPagesDisplayed={2}
+                                pageRangeDisplayed={5}
+                                onPageChange={handlePageChange}
+                                containerClassName={'pagination'}
+                                activeClassName={'active'}
+                            />
                         </Col>
 
                         <Col lg={3}>

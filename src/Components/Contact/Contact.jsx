@@ -4,10 +4,15 @@ import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMapMarkerAlt, faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faFacebookF, faLinkedinIn, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
-import React from 'react';
+import React, {useEffect} from 'react';
 
 
 function Contact(){
+
+    useEffect(() => {
+        document.title = "Contact us";
+      }, []); // Mảng rỗng đảm bảo rằng code chỉ chạy một lần sau khi component được mount
+    
 
     return (
         <>

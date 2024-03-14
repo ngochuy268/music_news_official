@@ -38,16 +38,16 @@ function Navbarfunc() {
           <Navbar.Collapse id="navbarCollapse" className="justify-content-between">
             <Nav className="mr-auto">
               <Nav.Link as={Link} to="/" className="nav-item nav-link">Home</Nav.Link>
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown" className="nav-item">
+              <NavDropdown title="POPS" id="basic-nav-dropdown" className="nav-item">
                 <NavDropdown.Item href="#" className="dropdown-item">Sub Item 1</NavDropdown.Item>
                 <NavDropdown.Item href="#" className="dropdown-item">Sub Item 2</NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link as={Link} to="/news"  className="nav-item nav-link">News</Nav.Link>
+              {/* <Nav.Link as={Link} to="/news"  className="nav-item nav-link">News</Nav.Link> */}
               <Nav.Link as={Link} to="/contact" className="nav-item nav-link">Contact Us</Nav.Link>
             </Nav>
             <div className='social ml-auto'>
               <a href=""><FontAwesomeIcon icon={faTwitter} /></a>
-              <a href=""><FontAwesomeIcon icon={faFacebookF} /></a>
+              <a href="https://www.facebook.com/profile.php?id=61557446814240"><FontAwesomeIcon icon={faFacebookF} /></a>
               <a href=""><FontAwesomeIcon icon={faLinkedinIn} /></a>
               <a href=""><FontAwesomeIcon icon={faInstagram} /></a>
               <a href=""><FontAwesomeIcon icon={faYoutube} /></a>

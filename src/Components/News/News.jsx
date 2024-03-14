@@ -3,16 +3,31 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
-import {ListGroup } from 'react-bootstrap';
+import { useParams } from 'react-router-dom';
+import React, {useEffect, useLayoutEffect, useState} from 'react';
+import YouTube from 'react-youtube';
 
-import news825 from '../../img/news-825x525.jpg';
+
+import news825 from '../../img/THRILLER_michael_Jackson.jpg';
 import news350_1 from '../../img/news-350x223-1.jpg';
 import news350_2 from '../../img/news-350x223-2.jpg';
 import news350_3 from '../../img/news-350x223-3.jpg';
 import news350_4 from '../../img/news-350x223-4.jpg';
 
 
-function News() {
+function News({ news, loading }) {
+
+  const { articleTitle } = useParams();
+
+  // Đợi load dữ liệu news
+  if (loading) {
+    return ;
+  }
+
+  const article = news.find(item => item.name.toLowerCase().replace(/\s+/g, '-') === articleTitle);
+    
+    document.title = `${article.name}`; 
+
 
   const newsItems = [
     { src: news350_1, title: "Lorem ipsum dolor sit amet consec adipis elit" },
@@ -47,21 +62,34 @@ function News() {
     ],
   };
 
+  // Youtube
+  const videoId = article.link_video;
+
+  const opts = {
+    height: '640',
+    width: '100%',
+    playerVars: {
+      autoplay: 0,
+    },
+  };
+
     return <>
       <div className="single-news">
         <Container>
           <Row>
             <Col lg={8}>
             <div className="sn-container">
+            <h1 className="sn-title">{article.name}</h1>
               <div className="sn-img">
                 <img src={news825} alt="News" />
               </div>
               <div className="sn-content">
-                <h1 className="sn-title">Lorem ipsum dolor sit amet</h1>
-                <p>
-                  Quisque arcu nulla, convallis nec orci vel, suscipit elementum odio. Curabitur volutpat velit non diam tincidunt sodales. Nullam sapien libero, bibendum nec viverra in, iaculis ut eros.
-                </p>
-                <h3>Lorem ipsum dolor sit amet</h3>
+                
+                <pre style={{whiteSpace: 'pre-wrap',wordWrap: 'break-word'}}>
+                  {article.content}
+                </pre>
+                <h3>Link video</h3>
+                <YouTube videoId={videoId} opts={opts} />
               </div>
             </div>
             <div className="sn-related">
@@ -91,15 +119,15 @@ function News() {
             <Col lg={4}>
                 <div className="sidebar">            
                     <div className="sidebar-widget">
-                      <h2 class="sw-title">In This Category</h2>
-                      <div class="news-list">
+                      <h2 className="sw-title">In This Category</h2>
+                      <div className="news-list">
                         <>
                           {newsItems.map((item, index) => (
-                            <div class="nl-item" key={index}>
-                              <div class="nl-img" key={index}>
+                            <div className="nl-item" key={index}>
+                              <div className="nl-img" key={index}>
                                   <img src={item.src} />
                               </div>
-                              <div class="nl-title" key={index}>
+                              <div className="nl-title" key={index}>
                                   <a href="">{item.title}</a>
                               </div>
                             </div>

@@ -10,10 +10,10 @@ import news350_1 from '../../img/news-350x223-1.jpg';
 function CatNews() {
 
     const settings = {
-        autoplay: false,
+        autoplay: true,
         infinite: true,
         dots: false,
-        slidesToShow: 2,
+        slidesToShow: 4,
         slidesToScroll: 1,
         responsive: [
         {
@@ -39,76 +39,95 @@ function CatNews() {
         <div className="cat-news">
             <Container>
                 <Row>
-                    <Col md={6}>
-                        <h2>Sports</h2>
-                        <Slider {...settings}>
-                            <div>
-                                <Col md={11}>
-                                    <div className="cn-img">
-                                        <img src={news350_1} alt="News 1" />
-                                        <div className="cn-title">
-                                        <a href="#">Lorem ipsum dolor sit</a>
-                                        </div>
-                                    </div>
-                                </Col>
-                            </div>
-                            <div>
-                                <Col md={11}>
-                                    <div className="cn-img">
-                                        <img src={news350_1} alt="News 2" />
-                                        <div className="cn-title">
-                                        <a href="#">Lorem ipsum dolor sit</a>
-                                        </div>
-                                    </div>
-                                </Col>
-                            </div>
-                            <div>
-                                <Col md={11}>
-                                    <div className="cn-img">
-                                        <img src={news350_1} alt="News 3" />
-                                        <div className="cn-title">
-                                        <a href="#">Lorem ipsum dolor sit</a>
-                                        </div>
-                                    </div>
-                                </Col>
-                            </div>
-                        </Slider>
-                    </Col>
-                    <Col md={6}>
-                        <h2>Sports</h2>
-                        <Slider {...settings}>
-                            <div>
-                                <Col md={11}>
+                    
+                    <h2>Sports</h2>
+                    <Slider {...settings}>
+                        <div>
+                            <Col md={11}>
                                 <div className="cn-img">
                                     <img src={news350_1} alt="News 1" />
                                     <div className="cn-title">
                                     <a href="#">Lorem ipsum dolor sit</a>
                                     </div>
                                 </div>
-                                </Col>
-                            </div>
-                            <div>
-                                <Col md={11}>
+                            </Col>
+                        </div>
+                        <div>
+                            <Col md={11}>
+                                <div className="cn-img">
+                                    <img src={news350_1} alt="News 1" />
+                                    <div className="cn-title">
+                                    <a href="#">Lorem ipsum dolor sit</a>
+                                    </div>
+                                </div>
+                            </Col>
+                        </div>
+                        <div>
+                            <Col md={11}>
                                 <div className="cn-img">
                                     <img src={news350_1} alt="News 2" />
                                     <div className="cn-title">
                                     <a href="#">Lorem ipsum dolor sit</a>
                                     </div>
                                 </div>
-                                </Col>
-                            </div>
-                            <div>
-                                <Col md={11}>
+                            </Col>
+                        </div>
+                        <div>
+                            <Col md={11}>
                                 <div className="cn-img">
                                     <img src={news350_1} alt="News 3" />
                                     <div className="cn-title">
                                     <a href="#">Lorem ipsum dolor sit</a>
                                     </div>
                                 </div>
-                                </Col>
+                            </Col>
+                        </div>
+                    </Slider>
+                
+                    <h2>Sports</h2>
+                    <Slider {...settings}>
+                    <div>
+                            <Col md={11}>
+                                <div className="cn-img">
+                                    <img src={news350_1} alt="News 1" />
+                                    <div className="cn-title">
+                                    <a href="#">Lorem ipsum dolor sit</a>
+                                    </div>
+                                </div>
+                            </Col>
+                        </div>
+                        <div>
+                            <Col md={11}>
+                            <div className="cn-img">
+                                <img src={news350_1} alt="News 1" />
+                                <div className="cn-title">
+                                <a href="#">Lorem ipsum dolor sit</a>
+                                </div>
                             </div>
-                        </Slider>
-                    </Col>
+                            </Col>
+                        </div>
+                        <div>
+                            <Col md={11}>
+                            <div className="cn-img">
+                                <img src={news350_1} alt="News 2" />
+                                <div className="cn-title">
+                                <a href="#">Lorem ipsum dolor sit</a>
+                                </div>
+                            </div>
+                            </Col>
+                        </div>
+                        <div>
+                            <Col md={11}>
+                            <div className="cn-img">
+                                <img src={news350_1} alt="News 3" />
+                                <div className="cn-title">
+                                <a href="#">Lorem ipsum dolor sit</a>
+                                </div>
+                            </div>
+                            </Col>
+                        </div>
+                    </Slider>
+                    
                 </Row>
             </Container>
         </div>
