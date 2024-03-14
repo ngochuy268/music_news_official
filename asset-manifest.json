@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/music_news_official/static/css/main.3815c21a.css",
-    "main.js": "/music_news_official/static/js/main.1100d188.js",
-    "static/js/453.99dcf01f.chunk.js": "/music_news_official/static/js/453.99dcf01f.chunk.js",
-    "static/media/THRILLER_michael_Jackson.jpg": "/music_news_official/static/media/THRILLER_michael_Jackson.bf823c61e82298e67590.jpg",
-    "static/media/news-450x350-2.jpg": "/music_news_official/static/media/news-450x350-2.769f591eef7651779677.jpg",
-    "static/media/news-450x350-1.jpg": "/music_news_official/static/media/news-450x350-1.6b8e357a5e607eb0832f.jpg",
-    "static/media/news-350x223-4.jpg": "/music_news_official/static/media/news-350x223-4.f245bfedc5d13c486a59.jpg",
-    "static/media/news-350x223-5.jpg": "/music_news_official/static/media/news-350x223-5.943869a6923e2f06d711.jpg",
-    "static/media/news-350x223-3.jpg": "/music_news_official/static/media/news-350x223-3.9ff634fb9fc9e556adb2.jpg",
-    "static/media/news-350x223-2.jpg": "/music_news_official/static/media/news-350x223-2.50ff523f583de67d4486.jpg",
-    "static/media/slick.svg": "/music_news_official/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "/music_news_official/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "/music_news_official/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "/music_news_official/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "/music_news_official/index.html",
-    "main.3815c21a.css.map": "/music_news_official/static/css/main.3815c21a.css.map",
-    "main.1100d188.js.map": "/music_news_official/static/js/main.1100d188.js.map",
-    "453.99dcf01f.chunk.js.map": "/music_news_official/static/js/453.99dcf01f.chunk.js.map"
+    "main.css": "/my-reat-app/static/css/main.22de98ff.css",
+    "main.js": "/my-reat-app/static/js/main.e6db50f3.js",
+    "static/js/453.99dcf01f.chunk.js": "/my-reat-app/static/js/453.99dcf01f.chunk.js",
+    "static/media/THRILLER_michael_Jackson.jpg": "/my-reat-app/static/media/THRILLER_michael_Jackson.bf823c61e82298e67590.jpg",
+    "static/media/news-450x350-2.jpg": "/my-reat-app/static/media/news-450x350-2.769f591eef7651779677.jpg",
+    "static/media/news-450x350-1.jpg": "/my-reat-app/static/media/news-450x350-1.6b8e357a5e607eb0832f.jpg",
+    "static/media/news-350x223-4.jpg": "/my-reat-app/static/media/news-350x223-4.f245bfedc5d13c486a59.jpg",
+    "static/media/news-350x223-5.jpg": "/my-reat-app/static/media/news-350x223-5.943869a6923e2f06d711.jpg",
+    "static/media/news-350x223-3.jpg": "/my-reat-app/static/media/news-350x223-3.9ff634fb9fc9e556adb2.jpg",
+    "static/media/news-350x223-2.jpg": "/my-reat-app/static/media/news-350x223-2.50ff523f583de67d4486.jpg",
+    "static/media/slick.svg": "/my-reat-app/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/my-reat-app/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/my-reat-app/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/my-reat-app/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/my-reat-app/index.html",
+    "main.22de98ff.css.map": "/my-reat-app/static/css/main.22de98ff.css.map",
+    "main.e6db50f3.js.map": "/my-reat-app/static/js/main.e6db50f3.js.map",
+    "453.99dcf01f.chunk.js.map": "/my-reat-app/static/js/453.99dcf01f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3815c21a.css",
-    "static/js/main.1100d188.js"
+    "static/css/main.22de98ff.css",
+    "static/js/main.e6db50f3.js"
   ]
 }
