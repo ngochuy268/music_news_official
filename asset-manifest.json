@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/music_news_official/static/css/main.4c5bd38f.css",
-    "main.js": "/music_news_official/static/js/main.d2fa1c35.js",
-    "static/js/453.ad6eb26e.chunk.js": "/music_news_official/static/js/453.ad6eb26e.chunk.js",
-    "static/media/news-825x525.jpg": "/music_news_official/static/media/news-825x525.ffab381b8ab3c7f0200e.jpg",
+    "main.css": "/music_news_official/static/css/main.3815c21a.css",
+    "main.js": "/music_news_official/static/js/main.1100d188.js",
+    "static/js/453.99dcf01f.chunk.js": "/music_news_official/static/js/453.99dcf01f.chunk.js",
+    "static/media/THRILLER_michael_Jackson.jpg": "/music_news_official/static/media/THRILLER_michael_Jackson.bf823c61e82298e67590.jpg",
     "static/media/news-450x350-2.jpg": "/music_news_official/static/media/news-450x350-2.769f591eef7651779677.jpg",
     "static/media/news-450x350-1.jpg": "/music_news_official/static/media/news-450x350-1.6b8e357a5e607eb0832f.jpg",
     "static/media/news-350x223-4.jpg": "/music_news_official/static/media/news-350x223-4.f245bfedc5d13c486a59.jpg",
@@ -15,12 +15,12 @@
     "static/media/slick.ttf": "/music_news_official/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/music_news_official/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/music_news_official/index.html",
-    "main.4c5bd38f.css.map": "/music_news_official/static/css/main.4c5bd38f.css.map",
-    "main.d2fa1c35.js.map": "/music_news_official/static/js/main.d2fa1c35.js.map",
-    "453.ad6eb26e.chunk.js.map": "/music_news_official/static/js/453.ad6eb26e.chunk.js.map"
+    "main.3815c21a.css.map": "/music_news_official/static/css/main.3815c21a.css.map",
+    "main.1100d188.js.map": "/music_news_official/static/js/main.1100d188.js.map",
+    "453.99dcf01f.chunk.js.map": "/music_news_official/static/js/453.99dcf01f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4c5bd38f.css",
-    "static/js/main.d2fa1c35.js"
+    "static/css/main.3815c21a.css",
+    "static/js/main.1100d188.js"
   ]
 }
