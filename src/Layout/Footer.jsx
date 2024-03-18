@@ -8,10 +8,10 @@ function Footer() {
       <Container>
         <Row>
           <Col md={6} className='copyright'>
-            <p>Copyright &copy; <a href="https://htmlcodex.com">HTML Codex</a>. All Rights Reserved</p>
+            <p>Copyright &copy;. All Rights Reserved</p>
           </Col>
           <Col md={6} className='template-by'>
-            <p>Template By <a href="https://htmlcodex.com">HTML Codex</a></p>
+            <p>Make by Legendary Unit</p>
           </Col>
         </Row>
       </Container>

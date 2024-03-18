@@ -5,7 +5,7 @@ import HomePage from "./Components/Home/HomePage";
 import Contact from './Components/Contact/Contact';
 import News from "./Components/News/News";
 import ScrollToTopButton from "./ScrollToTop";
-
+import Singer from './Components/Singers/Singer';
 function App() {
  
   const [news, setNews] = useState([]);
@@ -30,10 +30,11 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage news={news}/>} />
+        <Route path="/" element={<Layout news={news} loading={loading}/>}>
+          <Route index element={<HomePage news={news} loading={loading}/>} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/:articleTitle" element={<News news={news} loading={loading}/>} />
+          <Route path="/singer/:singerName" element={<Singer news={news} loading={loading}/>}/>
         </Route>
       </Routes>
       <ScrollToTopButton />

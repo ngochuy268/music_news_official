@@ -4,7 +4,7 @@ import TopNews from "./TopNews";
 import React, {useEffect} from 'react';
 
 
-function HomePage({ news }) {
+function HomePage({ news, loading }) {
 
   useEffect(() => {
     document.title = "Home";
@@ -12,8 +12,8 @@ function HomePage({ news }) {
 
 
   return <>
-    <TopNews news={news} />
-    <CatNews />
+    <TopNews news={news} loading={loading}/>
+    <CatNews news={news} loading={loading}/>
     {/* <MainNews news={news} itemsPerPage={10}/> */}
   </>;
 }

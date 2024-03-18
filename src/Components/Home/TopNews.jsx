@@ -10,17 +10,21 @@ import { faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons
 import { Link } from 'react-router-dom';
 
 
-import news1 from '../../img/news-450x350-1.jpg';
-import news2 from '../../img/news-450x350-2.jpg';
-import news350_1 from '../../img/news-350x223-1.jpg';
-import news350_2 from '../../img/news-350x223-2.jpg';
-import news350_3 from '../../img/news-350x223-3.jpg';
-import news350_4 from '../../img/news-350x223-4.jpg';
+function TopNews({ news, loading }){
 
+    if(loading) return;
 
-function TopNews({ news }){
+    console.log(news)
+    // Random news with 4 news
+    const slicedArray = news.slice(0, 4);
+    const randomSort = () => Math.random() - 0.5;
+    const shuffledArray = slicedArray.sort(randomSort);
+    const randomNewsWith4News = shuffledArray.slice(0, 4);
 
+    // Random news 
+    const randomNews = news.sort(() => Math.random() - 0.5);
     
+    // CSS arrow
     const NextArrow = ({ onClick }) => (
         <div className='arrow next' onClick={onClick}>
           <FontAwesomeIcon icon={faChevronRight} />
@@ -32,6 +36,8 @@ function TopNews({ news }){
           <FontAwesomeIcon icon={faChevronLeft} />
         </div>
       );
+
+    //   Slider
     const tnSlider = {
         autoplay: true,
         infinite: true,
@@ -48,12 +54,12 @@ function TopNews({ news }){
                 <Row>
                     <Col md={6} className='tn-left'>
                         <Slider {...tnSlider}>
-                            {news.map(item => (
-                                <div>    
+                            {randomNews.map((item,index) => (
+                                <div key={Math.random(index)}>    
                                     <div className='tn-img'>
-                                        <img src={news1} alt="news"/>
+                                        <img src={require(`../../img/${item.link_img}`)} alt="news"/>
                                         <div className='tn-title'>
-                                            <Link to={`/${item.name.toLowerCase().replace(/\s+/g, '-')}`}>{item.name}</Link>                                       
+                                            <Link to={`/${item.name.toLowerCase().replace(/\s+/g, '-')}`} target="_parent">{item.name}</Link>                                       
                                         </div>                                   
                                     </div>  
                                 </div>
@@ -62,16 +68,17 @@ function TopNews({ news }){
                     </Col>
                     <Col md={6} className='tn-right'>
                         <Row>
-                            {[news350_1, news350_2, news350_3, news350_4].map((item,index) => (
-                            <Col md={6} key={item}>
+                            {randomNewsWith4News.map((item,index) => (
+                            <Col md={6} key={Math.random(index)}>
                                 <div className='tn-img'>
-                                <img src={item} alt={`News ${index+1}`} />
+                                <img src={require(`../../img/${item.link_img}`)} alt={`News ${index+1}`} />
                                 <div className='tn-title'>
-                                    <a href="#">Lorem ipsum dolor sit</a>
+                                    <Link to={`/${item.name.toLowerCase().replace(/\s+/g, '-')}`} target="_parent">{item.name}</Link>
                                 </div>
                                 </div>
                             </Col>
                             ))}
+                            
                         </Row>
                     </Col>
                 </Row>

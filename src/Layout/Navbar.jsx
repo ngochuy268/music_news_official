@@ -3,10 +3,10 @@ import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faFacebookF, faLinkedinIn, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useParams} from 'react';
 
 
-function Navbarfunc() {
+function Navbarfunc({ news, loading }) {
 
   //Stick the navbar when scroll down
   const [isSticky, setIsSticky] = useState(false);
@@ -28,6 +28,8 @@ function Navbarfunc() {
     };
   }, []); // Empty dependency array ensures that this effect runs only once after component mount
 
+  if(loading) return;
+
   return <>
     <div className={`nav-bar ${isSticky ? 'nav-sticky' : ''}`}>
       <Container>
@@ -38,9 +40,15 @@ function Navbarfunc() {
           <Navbar.Collapse id="navbarCollapse" className="justify-content-between">
             <Nav className="mr-auto">
               <Nav.Link as={Link} to="/" className="nav-item nav-link">Home</Nav.Link>
-              <NavDropdown title="POPS" id="basic-nav-dropdown" className="nav-item">
-                <NavDropdown.Item href="#" className="dropdown-item">Sub Item 1</NavDropdown.Item>
-                <NavDropdown.Item href="#" className="dropdown-item">Sub Item 2</NavDropdown.Item>
+              <NavDropdown title="SINGER" id="basic-nav-dropdown" className="nav-item">
+                {[...new Set(news.map(item => item.author))].map((author, index) => (
+                  <NavDropdown.Item 
+                    key={Math.random(index)} 
+                    href={`/singer/${author.toLowerCase().replace(/\s+/g, '-')}`} 
+                    className="dropdown-item">
+                      {author}
+                  </NavDropdown.Item>
+                ))}
               </NavDropdown>
               {/* <Nav.Link as={Link} to="/news"  className="nav-item nav-link">News</Nav.Link> */}
               <Nav.Link as={Link} to="/contact" className="nav-item nav-link">Contact Us</Nav.Link>

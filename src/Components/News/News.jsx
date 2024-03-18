@@ -6,17 +6,12 @@ import "slick-carousel/slick/slick-theme.css";
 import { useParams } from 'react-router-dom';
 import React, {useEffect, useLayoutEffect, useState} from 'react';
 import YouTube from 'react-youtube';
-
-
-import news825 from '../../img/THRILLER_michael_Jackson.jpg';
-import news350_1 from '../../img/news-350x223-1.jpg';
-import news350_2 from '../../img/news-350x223-2.jpg';
-import news350_3 from '../../img/news-350x223-3.jpg';
-import news350_4 from '../../img/news-350x223-4.jpg';
+import { Link } from 'react-router-dom';
 
 
 function News({ news, loading }) {
 
+  // Params
   const { articleTitle } = useParams();
 
   // Đợi load dữ liệu news
@@ -24,20 +19,18 @@ function News({ news, loading }) {
     return ;
   }
 
+   // Random news with 5 news
+   const slicedArray = news.slice(0, 5);
+   const randomSort = () => Math.random() - 0.5;
+   const shuffledArray = slicedArray.sort(randomSort);
+   const randomNews = shuffledArray.slice(0, 4);
+
   const article = news.find(item => item.name.toLowerCase().replace(/\s+/g, '-') === articleTitle);
-    
-    document.title = `${article.name}`; 
+  document.title = `${article.name}`; 
 
-
-  const newsItems = [
-    { src: news350_1, title: "Lorem ipsum dolor sit amet consec adipis elit" },
-    { src: news350_2, title: "Lorem ipsum dolor sit amet consec adipis elit" },
-    { src: news350_3, title: "Lorem ipsum dolor sit amet consec adipis elit" },
-    { src: news350_4, title: "Lorem ipsum dolor sit amet consec adipis elit" },
-  ];
-
+  // Slider
   const settings = {
-    // autoplay: true,
+    autoplay: true,
     infinite: true,
     dots: false,
     slidesToShow: 3,
@@ -64,7 +57,6 @@ function News({ news, loading }) {
 
   // Youtube
   const videoId = article.link_video;
-
   const opts = {
     height: '640',
     width: '100%',
@@ -81,7 +73,7 @@ function News({ news, loading }) {
             <div className="sn-container">
             <h1 className="sn-title">{article.name}</h1>
               <div className="sn-img">
-                <img src={news825} alt="News" />
+                <img src={require(`../../img/${article.link_img}`)} alt="News" />
               </div>
               <div className="sn-content">
                 
@@ -95,24 +87,14 @@ function News({ news, loading }) {
             <div className="sn-related">
               <h2>Related News</h2>
                 <Slider {...settings}>
-                  <div className="sn-related-news">
-                      <img src={news350_1} alt="Related News 1" />
-                      <div className="sn-title"><a href="#">Interdum et fames ac ante</a></div>
-                  </div>
-                  <div className="sn-related-news">
-                      <img src={news350_2} alt="Related News 1" />
-                      <div className="sn-title"><a href="#">Interdum et fames ac ante</a></div>
-                  </div>
-                  <div className="sn-related-news">
-                      <img src={news350_3} alt="Related News 1" />
-                      <div className="sn-title"><a href="#">Interdum et fames ac ante</a></div>
-                  </div>
-                  <div className="sn-related-news">
-                      <img src={news350_4} alt="Related News 1" />
+                  {randomNews.map((item, index) => (
+                    <div className="sn-related-news" key={Math.random(index)}>
+                      <img src={require(`../../img/${item.link_img}`)} alt={item.name} />
                       <div className="sn-title">
-                        <a href="#">Interdum et fames ac ante</a>
+                        <Link to={`/${item.name.toLowerCase().replace(/\s+/g, '-')}`} target="_parent">{item.name}</Link>
                       </div>
-                  </div>
+                    </div>
+                  ))}
                 </Slider>
             </div>
             </Col>
@@ -122,13 +104,13 @@ function News({ news, loading }) {
                       <h2 className="sw-title">In This Category</h2>
                       <div className="news-list">
                         <>
-                          {newsItems.map((item, index) => (
-                            <div className="nl-item" key={index}>
-                              <div className="nl-img" key={index}>
-                                  <img src={item.src} />
+                          {randomNews.map((item, index) => (
+                            <div className="nl-item" key={Math.random(index)}>
+                              <div className="nl-img" key={Math.random(index)}>
+                                  <img src={require(`../../img/${item.link_img}`)} />
                               </div>
-                              <div className="nl-title" key={index}>
-                                  <a href="">{item.title}</a>
+                              <div className="nl-title" key={Math.random(index)}>
+                                <Link to={`/${item.name.toLowerCase().replace(/\s+/g, '-')}`} target="_parent">{item.name}</Link>
                               </div>
                             </div>
                           ))}

@@ -42,14 +42,14 @@ function Contact(){
                         </Col>
                         <Col md={4}>
                             <div className="contact-info">
-                                <h3>Get in Touch</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In condimentum quam ac mi viverra dictum. In efficitur ipsum diam, at dignissim lorem tempor in. Vivamus tempor hendrerit finibus.</p>
+                                <h3>Keep in touch</h3>
+                                <p>We are always here to assist you. Don't hesitate to reach out to us via the following means for any inquiries, feedback, or concerns related to your experience on Legendary Vibes.</p>
                                 <h4><FontAwesomeIcon icon={faMapMarkerAlt} /> 123 News Street, NY, USA</h4>
                                 <h4><FontAwesomeIcon icon={faEnvelope} /> info@example.com</h4>
                                 <h4><FontAwesomeIcon icon={faPhone} /> +123-456-7890</h4>
                                 <div className="social">
                                     <a href=""><FontAwesomeIcon icon={faTwitter} /></a>
-                                    <a href=""><FontAwesomeIcon icon={faFacebookF} /></a>
+                                    <a href="https://www.facebook.com/profile.php?id=61557446814240"><FontAwesomeIcon icon={faFacebookF} /></a>
                                     <a href=""><FontAwesomeIcon icon={faLinkedinIn} /></a>
                                     <a href=""><FontAwesomeIcon icon={faInstagram} /></a>
                                     <a href=""><FontAwesomeIcon icon={faYoutube} /></a>

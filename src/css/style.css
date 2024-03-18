@@ -327,6 +327,10 @@ button.btn:hover {
   position: relative;
 }
 
+.semi-dropdown-item .dropdown-item {
+  margin-right: 0 0 0 30px;
+}
+
 .nav-bar.nav-sticky {
   position: fixed;
   top: 0;
@@ -340,10 +344,15 @@ button.btn:hover {
   padding: 0;
 }
 
+.nav-bar .dropdown-item{
+  color: black !important;
+}
+
 .nav-bar .dropdown-item:hover {
   background-color: #ff6f61;
   color: #fff;
 }
+
 
 .nav-bar .dropdown-menu {
   padding: 0;
@@ -646,6 +655,117 @@ button.btn:hover {
 .cat-news .slick-next::before {
   content: "\f105";
 }
+
+
+
+/* Cat singer news */
+
+.cat-singer-news {
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+
+.cat-singer-news .col-md-6 {
+  margin-bottom: 30px;
+}
+
+.cat-singer-news h2 {
+  color: #000000;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 3px double #000000;
+}
+
+.cat-singer-news .cn-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.cat-singer-news .cn-img img {
+  width: 100%;
+}
+
+.cat-singer-news .cn-img:hover img {
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
+}
+
+.cat-singer-news .cn-title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 15px 10px 15px 20px;
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.9)
+  );
+  display: flex;
+  align-items: flex-end;
+}
+
+.cat-singer-news .cn-title a {
+  display: block;
+  width: 100%;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  transition: 0.3s;
+}
+
+.cat-singer-news .cn-title a:hover {
+  color: #ff6f61;
+}
+
+
+
+.cat-singer-news .slick-prev,
+.cat-singer-news .slick-next {
+  top: -30px;
+  width: 28px;
+  height: 28px;
+  z-index: 1;
+  transition: 0.5s;
+  color: #ffffff;
+  background: #000000;
+  border-radius: 4px;
+}
+
+.cat-singer-news .slick-prev {
+  left: calc(100% - 85px);
+}
+
+.cat-singer-news .slick-next {
+  right: 14px;
+}
+
+.cat-singer-news .slick-prev:hover,
+.cat-singer-news .slick-prev:focus,
+.cat-singer-news .slick-next:hover,
+.cat-singer-news .slick-next:focus {
+  color: #ffffff;
+  background: #ff6f61;
+}
+
+.cat-singer-news .slick-prev::before,
+.cat-singer-news .slick-next::before {
+  font-family: "Font Awesome 5 Free";
+  font-size: 18px;
+  font-weight: 900;
+  color: #ffffff;
+}
+
+.cat-singer-news .slick-prev::before {
+  content: "\f104";
+}
+
+.cat-singer-news .slick-next::before {
+  content: "\f105";
+}
+
 
 /**********************************/
 /********** Tab News CSS **********/

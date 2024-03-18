@@ -4,16 +4,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import news350_1 from '../../img/news-350x223-1.jpg';
+import { Link } from 'react-router-dom';
 
+function CatNews({ news, loading }) {
 
-function CatNews() {
+    
+    if(loading) return;
 
     const settings = {
         autoplay: true,
         infinite: true,
         dots: false,
-        slidesToShow: 4,
+        slidesToShow: 3,
         slidesToScroll: 1,
         responsive: [
         {
@@ -38,96 +40,37 @@ function CatNews() {
     return (<>
         <div className="cat-news">
             <Container>
-                <Row>
-                    
-                    <h2>Sports</h2>
+                <Row>                    
+                    <h2>Pops</h2>
                     <Slider {...settings}>
-                        <div>
-                            <Col md={11}>
-                                <div className="cn-img">
-                                    <img src={news350_1} alt="News 1" />
-                                    <div className="cn-title">
-                                    <a href="#">Lorem ipsum dolor sit</a>
+                        {news.map((item, index) => (
+                            <div key={Math.random(index)}>
+                                <Col md={11}>
+                                    <div className="cn-img">
+                                        <img src={require(`../../img/${item.link_img}`)} alt="ahihi"/>
+                                        <div className="cn-title">
+                                            <Link to={`/${item.name.toLowerCase().replace(/\s+/g, '-')}`} target="_parent">{item.name}</Link>  
+                                        </div>
                                     </div>
-                                </div>
-                            </Col>
-                        </div>
-                        <div>
-                            <Col md={11}>
-                                <div className="cn-img">
-                                    <img src={news350_1} alt="News 1" />
-                                    <div className="cn-title">
-                                    <a href="#">Lorem ipsum dolor sit</a>
-                                    </div>
-                                </div>
-                            </Col>
-                        </div>
-                        <div>
-                            <Col md={11}>
-                                <div className="cn-img">
-                                    <img src={news350_1} alt="News 2" />
-                                    <div className="cn-title">
-                                    <a href="#">Lorem ipsum dolor sit</a>
-                                    </div>
-                                </div>
-                            </Col>
-                        </div>
-                        <div>
-                            <Col md={11}>
-                                <div className="cn-img">
-                                    <img src={news350_1} alt="News 3" />
-                                    <div className="cn-title">
-                                    <a href="#">Lorem ipsum dolor sit</a>
-                                    </div>
-                                </div>
-                            </Col>
-                        </div>
-                    </Slider>
-                
-                    <h2>Sports</h2>
+                                </Col>
+                            </div>
+                        ))}   
+                    </Slider>              
+                    <h2>Rocks</h2>
                     <Slider {...settings}>
-                    <div>
-                            <Col md={11}>
-                                <div className="cn-img">
-                                    <img src={news350_1} alt="News 1" />
-                                    <div className="cn-title">
-                                    <a href="#">Lorem ipsum dolor sit</a>
+                        {news.map((item, index) => (
+                            <div key={Math.random(index)}>
+                                <Col md={11}>
+                                    <div className="cn-img">
+                                        <img src={require(`../../img/${item.link_img}`)} alt="ahihi"/>
+                                        <div className="cn-title">
+                                            <Link to={`/${item.name.toLowerCase().replace(/\s+/g, '-')}`} target="_parent">{item.name}</Link>  
+                                        </div>
                                     </div>
-                                </div>
-                            </Col>
-                        </div>
-                        <div>
-                            <Col md={11}>
-                            <div className="cn-img">
-                                <img src={news350_1} alt="News 1" />
-                                <div className="cn-title">
-                                <a href="#">Lorem ipsum dolor sit</a>
-                                </div>
+                                </Col>
                             </div>
-                            </Col>
-                        </div>
-                        <div>
-                            <Col md={11}>
-                            <div className="cn-img">
-                                <img src={news350_1} alt="News 2" />
-                                <div className="cn-title">
-                                <a href="#">Lorem ipsum dolor sit</a>
-                                </div>
-                            </div>
-                            </Col>
-                        </div>
-                        <div>
-                            <Col md={11}>
-                            <div className="cn-img">
-                                <img src={news350_1} alt="News 3" />
-                                <div className="cn-title">
-                                <a href="#">Lorem ipsum dolor sit</a>
-                                </div>
-                            </div>
-                            </Col>
-                        </div>
-                    </Slider>
-                    
+                        ))}    
+                    </Slider>                  
                 </Row>
             </Container>
         </div>

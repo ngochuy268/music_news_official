@@ -4,11 +4,11 @@ import Navbarfunc from "./Navbar.jsx";
 import Footer from "./Footer.jsx";
 import { Outlet } from "react-router-dom";
 
-function Layout() {
+function Layout({news, loading}) {
   return (
     <>
       <Header />
-      <Navbarfunc />
+      <Navbarfunc news={news} loading={loading}/>
       <main>
         <Outlet />
       </main>
